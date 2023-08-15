@@ -241,7 +241,6 @@
         convert.onclick = () => {
             output.value = input.value.replace(/\\/g, '\\\\')   // Backslash
                 .replace(/"/g, '\\"')     // Double quote
-                .replace(/'/g, "\\'")     // Single quote
                 .replace(/\n/g, '\\n')    // Newline
                 .replace(/\r/g, '\\r')    // Carriage return
                 .replace(/\t/g, '\\t')    // Tab
