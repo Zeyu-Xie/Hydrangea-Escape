@@ -1,252 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydrangea Escape</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
+        * {
+            /* color: wheat; */
+        }
+
         body {
-            padding: 24px;
             margin: 0;
-            height: 100vh;
 
             box-sizing: border-box;
+            height: 100vh;
+            width: 100vw;
 
-            background-image: url(./header_bg.jpg);
-            background-size: cover;
-            background-position: 50% -105px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
+            background-image: url("./test-2.jpg");
+            background-position: top;
+            background-size: calc(min(750px, 100%));
         }
 
-        #cat {
-            position: absolute;
-            left: 250px;
-            top: 220px;
+        textarea {
 
-            width: 200px;
-        }
+            max-width: 100%;
 
-        .a {
-            border: rgb(59, 58, 58) solid;
-            border-radius: 9px;
-            border-width: 2px 4px;
-            transform: translateY(-100px);
-            position: relative;
-            width: 700px;
-            height: 400px;
-
-            box-shadow: 0 0 4px rgba(59, 58, 58, 0.8);
-            background-color: #773b2d;
-
-            overflow: hidden;
-        }
-
-        
-
-        .b {
-            position: absolute;
-            width: 200px;
-            height: 300px;
-            left: 0;
-            margin: 75px 50px;
-            transition: 1s;
-        }
-
-        .b a {
-            text-decoration: none;
-            color: #fff;
-            font: 900 28px '';
-            text-transform: uppercase;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .b h2 {
-            transition: .5s 1s;
-            opacity: 0;
-            color: #fff;
-        }
-
-        .b span {
-            transition: .5s 1s;
-            color: #fff;
-            font: 500 15px '';
-            position: absolute;
-            top: 70px;
-            text-align: justify;
-            line-height: 150%;
-        }
-
-        .c {
-            position: absolute;
-            top: -130px;
-            right: -240px;
-        }
-
-        .d,
-        .e {
-            position: absolute;
-            right: calc(var(--i)*100px);
-            width: calc(var(--w)*40px);
-            height: 500px;
-            overflow: hidden;
-            border-radius: 100px;
-            transform: rotateZ(220deg) translate(0, 0);
-            background: #EAD4A3;
-            transition: .5s .5s;
-        }
-
-        .d:nth-child(2) {
-            background: #E3DED8;
-        }
-
-        .e {
-            left: -470px;
-            top: -140px;
-            width: 70px;
-            background-color: #d4a69a;
-        }
-
-        .a:hover .c div {
-            transition: .5s calc(var(--i)*.1s);
-            transform: rotateZ(220deg) translate(-200px, 400px);
-        }
-
-        .a:hover .b {
-            transition: 1s .5s;
-            left: 370px;
-            transform: translateY(-15px);
-        }
-
-        .a:hover .b span {
-            transition: 1s .5s;
-            top: 105px;
-        }
-
-        .a:hover .b h2 {
-            transition: 1s .5s;
-            opacity: 1;
-        }
-
-        .f {
-            width: 250px;
-            height: 250px;
-            position: absolute;
-            margin: 70px;
-            opacity: 0;
-            transition: .5s;
-            text-align: center;
-        }
-
-        .a:hover .f {
-            transition: 1s 1.3s;
-            opacity: 1;
-        }
-
-        .f textarea:nth-of-type(1) {
-            padding: 10px;
-
-            border: solid white;
-            border-width: 2px 2px 1px 2px;
-            border-radius: 6px;
-
-            margin-bottom: 20px;
-
-            width: 100%;
-            height: 40%;
-
-            background: rgba(255, 255, 255, 0.3);
-            color: white;
-
-            letter-spacing: 2px;
             resize: none;
+            border: none;
+            background: none;
+            color: wheat;
+            height: 5rem;
+            overflow: hidden;
+            text-overflow: clip;
 
-            font-size: 15px;
-            line-height: 150%;
-
-            word-wrap: break-word;
+            font-family: "girl";
+            font-size: x-large;
         }
 
-        .f textarea:nth-of-type(2) {
-
-            padding: 10px;
-
-            border: solid white;
-            border-width: 1px 2px 2px 2px;
-            border-radius: 6px;
-
-            margin-top: 20px;
-
-            width: 100%;
-            height: 20%;
-
-            letter-spacing: 2px;
-            resize: none;
-
-            background: rgba(255, 255, 255, 0.3);
-            color: white;
-
-            font-size: 15px;
-            line-height: 150%;
-
-            word-wrap: break-word;
-        }
-
-        .f textarea:focus {
+        textarea:focus {
             outline: none;
         }
 
-        .f a {
-            text-decoration: none;
-            text-transform: uppercase;
-            color: white;
-            font-family: 'Courier New', Courier, monospace;
+        h1 {
+            font-family: "pupil";
+            color: wheat;
+        }
+
+        #container {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        @font-face {
+            font-family: "pupil";
+            src: url(./CfMidnightRegular-MJ8B.ttf);
+        }
+
+        @font-face {
+            font-family: "girl";
+            src: url(./girl.ttf);
         }
     </style>
 </head>
-
 <body>
-    <div class="a">   
-        <div class="b">
-            <a href="#">Escape</a>
-            <h2>Escape Converter</h2>
-            <span>
-                Introducing our website - your go-to destination for effortlessly converting normal strings into escape
-                strings. Simplify your programming tasks and ensure data accuracy with just a few clicks. Try it now and
-                streamline your string handling experience.</span>
-        </div>
-        <div class="c">
-            <div class="d" style="--i:1;--w:1.5"></div>
-            <div class="d" style="--i:2;--w:1.6"></div>
-            <div class="d" style="--i:3;--w:1.4"></div>
-            <div class="d" style="--i:4;--w:1.7"></div>
-            <div class="e" style="--i:1"></div>
-        </div>
-        <div class="f">
-            <textarea name="" id="input" cols="30" rows="10"></textarea>
-            <a href="#" id="convert">Press ↕️ to convert</a>
-            <textarea name="" id="output" cols="30" rows="10" readonly></textarea>
-        </div>
+    <div id="container" class="container">
+        <h1 class="mb-5">Hydrangea Escape</h1>
+        <textarea name="" id="input" class="mb-5" placeholder="PLACEHOLDER"></textarea>
+        <textarea name="" id="output" class="mb-5" placeholder="PLACEHOLDER" readonly></textarea>
     </div>
-
     <script>
-        const input = document.getElementById("input")
-        const output = document.getElementById("output")
-        const convert = document.getElementById("convert")
-        convert.onclick = () => {
+        const input=document.getElementById("input")
+        const output=document.getElementById("output")
+        input.addEventListener("change",()=>{
             output.value = input.value.replace(/\\/g, '\\\\')   // Backslash
                 .replace(/"/g, '\\"')     // Double quote
                 .replace(/\n/g, '\\n')    // Newline
                 .replace(/\r/g, '\\r')    // Carriage return
                 .replace(/\t/g, '\\t')    // Tab
-        }
+        })
     </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
-
 </html>
