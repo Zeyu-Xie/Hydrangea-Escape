@@ -6,9 +6,6 @@
     <title>Hydrangea Escape</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
-        * {
-            /* color: wheat; */
-        }
 
         body {
             margin: 0;
@@ -16,14 +13,30 @@
             box-sizing: border-box;
             height: 100vh;
             width: 100vw;
+            overflow: scroll;
 
             background-image: url("./test-2.jpg");
             background-position: top;
             background-size: calc(min(750px, 100%));
         }
 
+        #container {
+            width: fit-content;
+            max-width: 100%;
+            height: fit-content;
+            padding: 24px;
+            padding-bottom: 72px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
         textarea {
 
+            box-sizing: border-box;
             max-width: 100%;
 
             resize: none;
@@ -31,11 +44,13 @@
             background: none;
             color: wheat;
             height: 5rem;
-            overflow: hidden;
+            overflow: scroll;
             text-overflow: clip;
 
             font-family: "girl";
-            font-size: x-large;
+            font-size: large;
+
+            margin-right: 24px;
         }
 
         textarea:focus {
@@ -47,16 +62,7 @@
             color: wheat;
         }
 
-        #container {
-            position: absolute;
-            margin: auto;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: fit-content;
-            height: fit-content;
-        }
+        
 
         @font-face {
             font-family: "pupil";
@@ -70,10 +76,10 @@
     </style>
 </head>
 <body>
-    <div id="container" class="container">
+    <div id="container">
         <h1 class="mb-5">Hydrangea Escape</h1>
-        <textarea name="" id="input" class="mb-5" placeholder="PLACEHOLDER"></textarea>
-        <textarea name="" id="output" class="mb-5" placeholder="PLACEHOLDER" readonly></textarea>
+        <textarea name="" id="input" class="mb-3" placeholder="PLACEHOLDER"></textarea>
+        <textarea name="" id="output" class="mb-3" placeholder="PLACEHOLDER" readonly></textarea>
     </div>
     <script>
         const input=document.getElementById("input")
