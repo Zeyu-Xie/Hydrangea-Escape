@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,15 +14,19 @@
             min-height: 20vh;
             padding: 0.6rem 1rem;
         }
-        th, td {
+
+        th,
+        td {
             padding: 0.3rem 0.5rem;
         }
+
         .escape-sequence {
             font-family: 'Courier New', Courier, monospace;
         }
     </style>
 
 </head>
+
 <body>
     <header>
         <h1 style="display: none;">Hydrangea Escape</h1>
@@ -33,16 +38,19 @@
         <h2>Input Area</h2>
         <textarea name="" id="input" placeholder="Input your string here."></textarea>
         <h2>Output Area</h2>
-        <textarea name="" id="output" readonly placeholder="The escaped string will be displayed here." style="font-family: 'Courier New', Courier, monospace;"></textarea>
+        <textarea name="" id="output" readonly placeholder="The escaped string will be displayed here."
+            style="font-family: 'Courier New', Courier, monospace;"></textarea>
         <h2>Hints</h2>
         <ol>
             <li>
                 <p><b>What is this tool for?</b></p>
-                <p>This tool is used to escape special characters in a string, which is useful when you want to use the string in a programming language.</p>
+                <p>This tool is used to escape special characters in a string, which is useful when you want to use the
+                    string in a programming language.</p>
             </li>
             <li>
                 <p><b>How to use this tool?</b></p>
-                <p>Enter the string you want to escape in the input area, and the escaped string will be displayed in the output area.</p>
+                <p>Enter the string you want to escape in the input area, and the escaped string will be displayed in
+                    the output area.</p>
             </li>
             <li>
                 <p><b>What characters will be escaped?</b></p>
@@ -93,7 +101,7 @@
                     </tbody>
                 </table>
             </li>
-        </ul>
+            </ul>
     </div>
     <footer>
         <p>
@@ -107,9 +115,9 @@
     </footer>
     <script src="https://zeyu-xie.github.io/Myosotis-Web/Scholar_Lite/index.js"></script>
     <script>
-        const input=document.getElementById("input")
-        const output=document.getElementById("output")
-        input.addEventListener("change",()=>{
+        const input = document.getElementById("input")
+        const output = document.getElementById("output")
+        input.addEventListener("change", () => {
             output.value = input.value.replace(/\\/g, '\\\\')   // Backslash
                 .replace(/"/g, '\\"')     // Double quote
                 .replace(/\n/g, '\\n')    // Newline
@@ -119,5 +127,17 @@
                 .replace(/\}/g, '\\}');   // Right curly brace
         })
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LFF8GVT4L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7LFF8GVT4L');
+    </script>
+
 </body>
+
 </html>
