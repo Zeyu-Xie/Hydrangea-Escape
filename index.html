@@ -4,83 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydrangea Escape</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://zeyu-xie.github.io/Myosotis-Web/Scholar_Lite/index.css">
+    <link rel="icon" href="https://zeyu-xie.github.io/Myosotis-Web/Scholar_Lite/favicon.ico">
+
     <style>
-
-        body {
-            margin: 0;
-
-            box-sizing: border-box;
-            height: 100vh;
-            width: 100vw;
-            overflow: scroll;
-
-            background-image: url("./test-2.jpg");
-            background-position: top;
-            background-size: calc(min(750px, 100%));
-        }
-
-        #container {
-            width: fit-content;
-            max-width: 100%;
-            height: fit-content;
-            padding: 24px;
-            padding-bottom: 72px;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
-
         textarea {
-
-            box-sizing: border-box;
-            max-width: 100%;
-
-            resize: none;
-            border: none;
-            background: none;
-            color: wheat;
-            height: 5rem;
-            overflow: scroll;
-            text-overflow: clip;
-
-            font-family: "girl";
-            font-size: large;
-
-            margin-right: 24px;
+            width: 100%;
+            min-height: 20vh;
+            padding: 0.6rem 1rem;
         }
-
-        textarea:focus {
-            outline: none;
+        th, td {
+            padding: 0.3rem 0.5rem;
         }
-
-        h1 {
-            font-family: "pupil";
-            color: wheat;
-        }
-
-        
-
-        @font-face {
-            font-family: "pupil";
-            src: url(./CfMidnightRegular-MJ8B.ttf);
-        }
-
-        @font-face {
-            font-family: "girl";
-            src: url(./girl.ttf);
+        .escape-sequence {
+            font-family: 'Courier New', Courier, monospace;
         }
     </style>
+
 </head>
 <body>
+    <header>
+        <h1 style="display: none;">Hydrangea Escape</h1>
+        <nav>
+            <a href="#">Hydrangea Escape</a>
+        </nav>
+    </header>
     <div id="container">
-        <h1 class="mb-5">Hydrangea Escape</h1>
-        <textarea name="" id="input" class="mb-3" placeholder="PLACEHOLDER"></textarea>
-        <textarea name="" id="output" class="mb-3" placeholder="PLACEHOLDER" readonly></textarea>
+        <h2>Input Area</h2>
+        <textarea name="" id="input" placeholder="Input your string here."></textarea>
+        <h2>Output Area</h2>
+        <textarea name="" id="output" readonly placeholder="The escaped string will be displayed here." style="font-family: 'Courier New', Courier, monospace;"></textarea>
+        <h2>Hints</h2>
+        <ol>
+            <li>
+                <p><b>What is this tool for?</b></p>
+                <p>This tool is used to escape special characters in a string, which is useful when you want to use the string in a programming language.</p>
+            </li>
+            <li>
+                <p><b>How to use this tool?</b></p>
+                <p>Enter the string you want to escape in the input area, and the escaped string will be displayed in the output area.</p>
+            </li>
+            <li>
+                <p><b>What characters will be escaped?</b></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Character</th>
+                            <th>Escape Sequence</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Backslash</td>
+                            <td class="escape-sequence">\</td>
+                            <td class="escape-sequence">\\</td>
+                        </tr>
+                        <tr>
+                            <td>Double quote</td>
+                            <td class="escape-sequence">"</td>
+                            <td class="escape-sequence">\"</td>
+                        </tr>
+                        <tr>
+                            <td>Newline</td>
+                            <td class="escape-sequence"></td>
+                            <td class="escape-sequence">\n</td>
+                        </tr>
+                        <tr>
+                            <td>Carriage return</td>
+                            <td class="escape-sequence"></td>
+                            <td class="escape-sequence">\r</td>
+                        </tr>
+                        <tr>
+                            <td>Tab</td>
+                            <td class="escape-sequence"></td>
+                            <td class="escape-sequence">\t</td>
+                        </tr>
+                        <tr>
+                            <td>Left curly brace</td>
+                            <td class="escape-sequence">{</td>
+                            <td class="escape-sequence">\{</td>
+                        </tr>
+                        <tr>
+                            <td>Right curly brace</td>
+                            <td class="escape-sequence">}</td>
+                            <td class="escape-sequence">\}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
     </div>
+    <footer>
+        <p>
+            ©️ <time class="current_year">[Current Year]</time> <a href="https://zeyu-xie.github.io"
+                class="author">[Author]</a>. All rights reserved.
+        </p>
+        <nav>
+            <a href="mailto:xie.zeyu20@gmail.com">Email</a> |
+            <a href="https://github.com/zeyu-xie">GitHub</a>
+        </nav>
+    </footer>
+    <script src="https://zeyu-xie.github.io/Myosotis-Web/Scholar_Lite/index.js"></script>
     <script>
         const input=document.getElementById("input")
         const output=document.getElementById("output")
@@ -94,6 +119,5 @@
                 .replace(/\}/g, '\\}');   // Right curly brace
         })
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
